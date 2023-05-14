@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "homeworkDairy_backend": {
+      "main": "src/homeworkDairy_backend/main.mo",
+      "type": "motoko"
+    },
+    "homeworkDairy_frontend": {
+      "dependencies": [
+        "homeworkDairy_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/homeworkDairy_frontend/src/index.html"
+      },
+      "source": [
+        "src/homeworkDairy_frontend/assets",
+        "dist/homeworkDairy_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
